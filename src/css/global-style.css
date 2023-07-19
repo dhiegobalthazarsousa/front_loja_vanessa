@@ -1,0 +1,81 @@
+:root {
+    --black-color: rgb(24, 24, 24);
+    --gray-color: rgb(180, 180, 180);
+    --white-color: rgb(214, 214, 214);
+    --clear-color: rgb(255, 255, 255);
+    --blue-color: rgb(70, 70, 198);
+}
+
+button {
+    padding: 5px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px var(--gray-color);
+}
+
+input {
+    padding: 8px;
+    font-size: medium;
+    font-weight: 600;
+}
+
+.ali-items-center {
+    align-items: center;
+}
+
+.btn-accept {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+}
+
+.column {
+    flex-direction: column;
+}
+
+.flex {
+    display: flex;
+}
+
+.full-content-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.input-border-bottom {
+    border: none;
+    border-bottom: 1px solid var(--black-color);
+    outline: none;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.jc-space-evenly {
+    justify-content: space-evenly;
+}
+
+.md-container {
+    width: 33vw;
+    height: 33vh;
+}
+
+.sm-input-width {
+    width: 33%;
+}
+
+.md-input-width {
+    width: 66%;
+}
+
+.card-form {
+    background-color: var(--clear-color);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px var(--gray-color);
+    padding: 10px;
+    height: 30rem;
+}

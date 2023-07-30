@@ -1,28 +1,51 @@
-import React from 'react';
-import logoLoja from '../images/logo-loja.png';
+import React, { useState } from 'react';
+import Logo from '../components/Logo';
+
+
 
 export default function FormLogin() {
+
+    const [input, setInput] = useState({
+        emailInput: '',
+        senhaInput: ''
+
+    });
+
+    const handleChange = ({target}) => {
+        console.log(target.value);
+        setInput({
+            ...input,
+            [target.name]: target.value
+        });
+    };
+
     return (
         <section
             id='form-container'
-            className='flex column md-container jc-space-evenly ali-items-center card-form'>
-            <div>
-                <img src={logoLoja} alt="" />
-            </div>
-            <h1>PÁGINA DE LOGIN</h1>
-            <input
-                data-textid='form-email-login'
-                type='text'
-                className='input-border-bottom md-input-width'
-                placeholder='Email'
-            />
-            <input
-                data-textid='form-password-login'
-                type='password'
-                className='input-border-bottom md-input-width'
-                placeholder='Password'
-            />
-            <button data-textid='form-button-login' type='button' className='btn-accept'>Login</button>
+            className='flex-column sm-card secondary-center'>
+            <Logo />
+            <p>Entrar</p>
+            <form className="flex-column secondary-center">
+                <input
+                    data-textid='form-email-login'
+                    className='input-border-bottom bg-input-width'
+                    name='emailInput'
+                    onChange={handleChange}
+                    placeholder='Email'
+                    type='text'
+                    value={input.emailInput}
+                />
+                <input
+                    data-textid='form-password-login'
+                    className='input-border-bottom bg-input-width'
+                    name='senhaInput'
+                    onChange={handleChange}
+                    placeholder='Password'
+                    type='password'
+                    value={input.senhaInput}
+                />
+                <button data-textid='form-button-login' type='button' className='btn-accept'>Login</button>
+            </form>
         </section>
     );
 }

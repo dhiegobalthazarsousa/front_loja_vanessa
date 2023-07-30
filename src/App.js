@@ -1,8 +1,8 @@
 import React from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Login from './pages/Login';
-import Home from './pages/Home';
 import NotFound from './pages/NotFound';
+import Dashboard from './pages/Dashboard';
 
 function App() {
 
@@ -10,11 +10,15 @@ function App() {
         {
             path: '/',
             element: <Login />,
-            errorElement: <NotFound />
+            errorElement: <NotFound />,
         },
         {
-            path: '/home',
-            element: <Home />,
+            path: '/login',
+            element: <Login />,
+        },
+        {
+            path: '/dashboard',
+            element: <Dashboard />,
         },
     ]);
     return (
